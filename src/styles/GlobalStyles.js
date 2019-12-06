@@ -17,7 +17,7 @@ const Shadow = {
 }
 
 const inputSettings = {
-  paddingX: marginsPaddings.md,
+  paddingX: marginsPaddings.sm,
   paddingY: marginsPaddings.sm,
   lineHeight: 1.25,
   borderWidth: borderWidth.sm,

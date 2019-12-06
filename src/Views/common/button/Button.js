@@ -18,7 +18,7 @@ const Button = (props) => {
   }
 
   return (
-    <ButtonLink {...commonProps} to={props.link} type='button'>
+    <ButtonLink {...commonProps} to={props.link}>
       {props.children}
     </ButtonLink>
   )
