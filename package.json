@@ -1,0 +1,20 @@
+{
+  "name": "bago",
+  "version": "1.0.0",
+  "description": "un sitio de distribucion de medicamentos entre farmacias y distribuidores",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "farmacia",
+    "medicina",
+    "medicamento",
+    "distribuiores"
+  ],
+  "author": "Geraldyn Chirinos",
+  "license": "MIT",
+  "dependencies": {
+    "react": "16.12.0"
+  }
+}
