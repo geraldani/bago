@@ -6,6 +6,17 @@ const GlobalStyles = createGlobalStyle`
   body {
     margin: 0;
   }
+  .text-sm{
+    font-size: ${fontSize.sm}!important;
+  }
+  .btn-padding{
+    padding: calc(0.4rem + 1px) calc(0.8rem + 1px)!important;
+  }
+  .centrado{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+  }
 `
 
 // shadow types

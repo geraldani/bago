@@ -10,7 +10,7 @@ const color = {
   secondary: '#dddddd',
   border: 'rgba(0, 0, 0, 0.125)',
   white: '#ffffff',
-  back: '#000000'
+  black: '#000000'
 }
 
 const borderWidth = {
@@ -44,7 +44,7 @@ const fontSize = {
   base: 1 + medidas.rem,
   lg: 1.2 + medidas.rem,
   md: 1 + medidas.rem,
-  sm: 0.8 + medidas.rem,
+  sm: 0.85 + medidas.rem,
   xs: 0.6 + medidas.rem
 }
 

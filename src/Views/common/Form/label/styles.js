@@ -33,5 +33,6 @@ const StyledBlockLabel = styled(StyledInlineLabel)`
   width: 100%;
   align-items: start;
   margin-bottom: 0.8em;
+  margin-top: 0.8em;
 `
 export { StyledInlineLabel, StyledBlockLabel }

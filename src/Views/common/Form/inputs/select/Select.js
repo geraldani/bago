@@ -41,7 +41,7 @@ const Select = ({ options, placeholder, label, multiple, onChange, name }) => {
   }, [selectedElement.length])
 
   return (
-    <div>
+    <>
       <LabelBlock marginBottom={multiple && setSelectedElement.length === 0}>
         {label}
         <StyledSelect name={name} multi={multiple} onChange={handleChange}>
@@ -57,11 +57,11 @@ const Select = ({ options, placeholder, label, multiple, onChange, name }) => {
       </LabelBlock>
       {
         multiple &&
-        <div>
-          {selectedElement.map(el => <ElementSelected key={el.name} element={el.name} onClick={onRemoveElement} />)}
-        </div>
+          <div>
+            {selectedElement.map(el => <ElementSelected key={el.name} element={el.name} onClick={onRemoveElement} />)}
+          </div>
       }
-    </div>
+    </>
   )
 }
 

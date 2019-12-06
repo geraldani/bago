@@ -6,27 +6,27 @@ import {
   borderRadius,
   gridBreakpoints,
   globalSizes,
-  borderWidth
+  borderWidth, medidas
 } from '../../../styles/GlobalVariables'
 import { Shadow } from '../../../styles/GlobalStyles'
 
 // line height
 const btnLineHeight = 1.2
-const btnFontWeight = 'bold'
-const btnBorderWidth = borderWidth.md
+const btnFontWeight = 'normal'
+const btnBorderWidth = borderWidth.sm
 
 // padding x
 const btnPaddingX = {
-  sm: 0.8 + 'rem',
-  md: 1.333 + 'rem',
-  lg: 2.667 + 'rem'
+  sm: 0.8 + medidas.rem,
+  md: 1.333 + medidas.rem,
+  lg: 2.667 + medidas.rem
 }
 
 // padding y
 const btnPaddingY = {
-  sm: 0.4 + 'rem',
-  md: 0.6667 + 'rem',
-  lg: 1.067 + 'rem'
+  sm: 0.4 + medidas.rem,
+  md: 0.6667 + medidas.rem,
+  lg: 1.067 + medidas.rem
 }
 
 // font sizes
@@ -50,7 +50,7 @@ const btnColor = {
   primaryHover: color.primary + 'd6',
   secondaryHover: color.secondary + 'd6',
   colorPrimary: color.black,
-  colorSecondary: color.back
+  colorSecondary: color.black
 }
 
 const findSize = (size) => globalSizes.find(e => e === size)
@@ -62,6 +62,7 @@ const ButtonStylesTypes = {
     border-color: ${btnColor.primary};
     &:hover{
     transform: scale(1.05);
+    color: ${btnColor.colorPrimary};
 
   }`,
   secondary: css`
@@ -93,13 +94,11 @@ const ButtonStylesTypes = {
   'simple-primary': css`
     background-color: transparent;
     border-color: transparent;
-    color: ${btnColor.primary};
+    color: ${btnColor.colorPrimary};
     padding: ${btnPaddingY.sm} ${btnPaddingX.sm}!important;
     border-radius: ${btnBorderRadius.xs}!important;
     &:hover{
-      background-color: transparent;
-      border-color: transparent;
-      color: ${btnColor.primaryHover};
+        transform: scale(1.05);
     }
   `,
   'simple-secondary': css`
@@ -164,7 +163,6 @@ const commosStyles = css`
   cursor: pointer;
   user-select: none;
   width: auto;
-  margin-bottom: 0.5rem;
   display: inline-block;
   //shadows
   ${props => ShadowStyles[Object.keys(ShadowStyles).find(e => e === props.shadow)]};
@@ -178,7 +176,7 @@ const commosStyles = css`
   border-radius: ${props => btnBorderRadius[Object.keys(btnBorderRadius).find(e => e === props.radius)]};
   
   //block
-  ${props => typeof (props.block) === 'boolean' && props.block && blockButton}
+  ${props => (typeof (props.block)) === 'boolean' && blockButton}
   
   //disabled
   ${props => props.disabled && buttonDisable};

@@ -3,7 +3,6 @@ import { GlobalInputStyles } from '../../../../../styles/GlobalStyles'
 
 const StyledSelect = styled.select`
   ${GlobalInputStyles};
-  margin-top: 15px;
   //appearance: none;      
 `
 

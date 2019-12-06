@@ -5,16 +5,43 @@ import Title from '../common/title/Title'
 import BodyCard from '../common/cards/genericCard/BodyCard'
 import Button from '../common/button/Button'
 import FooterCard from '../common/cards/genericCard/FooterCard'
-import Input from '../common/Form/inputs/generic/Input'
-import Select from '../common/Form/inputs/select/Select'
 import Form from '../common/Form/form/form'
+import { routesPaths } from '../utils'
 
 const Register = () => {
-  const selectOptions = [
-    { name: 'Distribuidor', value: 'dist' },
-    { name: 'Farmacia', value: 'farm' },
-    { name: 'Administrador', value: 'admin' }
+  const formStructure = [
+    {
+      type: 'text',
+      name: 'name',
+      label: 'Nombre'
+    },
+    {
+      type: 'text',
+      name: 'direction',
+      label: 'Direccion'
+    },
+    {
+      type: 'select',
+      name: 'personType',
+      label: 'Seleccione el tipo de usuario que eres',
+      options: [
+        { name: 'Distribuidor', value: 'dist' },
+        { name: 'Farmacia', value: 'farm' },
+        { name: 'Administrador', value: 'admin' }
+      ]
+    },
+    {
+      type: 'text',
+      name: 'cuit',
+      label: 'CUIT'
+    },
+    {
+      type: 'password',
+      name: 'pass',
+      label: 'Contraseña'
+    }
   ]
+
   return (
     <div className='row justify-content-center py-5'>
       <div className='col-12 col-md-7 col-lg-5 px-5 px-md-0'>
@@ -23,17 +50,10 @@ const Register = () => {
             <Title>Registrate</Title>
           </HeaderCard>
           <BodyCard>
-            <Form>
-              <Input type='text' name='name' label='Nombre' />
-              <Input type='text' name='direction' label='Direccion' />
-              <Select name='personType' label='Soy' options={selectOptions} />
-              <Input type='text' name='cuit' label='CUIT' />
-              <Input type='email' name='email' label='Email' />
-              <Input type='password' name='pass' label='Contraseña' />
-            </Form>
+            <Form structure={formStructure} />
           </BodyCard>
           <FooterCard>
-            <Button block>Aceptar</Button>
+            <Button block link={routesPaths.login}>Aceptar</Button>
           </FooterCard>
         </GenericCard>
       </div>

@@ -58,6 +58,7 @@ Button.propTypes = {
     'md',
     'lg'
   ]),
+  // block: PropTypes.bool,
   block: PropTypes.oneOfType([
     PropTypes.oneOf(['sm', 'md']),
     PropTypes.bool

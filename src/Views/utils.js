@@ -1,3 +1,9 @@
+const routesPaths = {
+  home: '/',
+  login: '/entra',
+  register: '/registrate'
+}
+
 // funcion que ordena un vector
 const sortArray = (array, order = 'asc', key) => {
   const compare = (a, b) => {
@@ -22,5 +28,6 @@ const sortArray = (array, order = 'asc', key) => {
 }
 
 export {
-  sortArray
+  sortArray,
+  routesPaths
 }
