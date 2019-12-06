@@ -2,21 +2,22 @@ const medidas = {
   px: 'px',
   em: 'em',
   rem: 'rem',
-  por: '%',
+  por: '%'
 }
 
 const color = {
-  primary: '#aaa',
-  secondary: '#ddd',
+  primary: '#bbbbbb',
+  secondary: '#dddddd',
   border: 'rgba(0, 0, 0, 0.125)',
-  white: '#fff'
+  white: '#ffffff',
+  back: '#000000'
 }
 
 const borderWidth = {
-  thin: 1 + medidas.px,
-  normal: 2 + medidas.px,
-  bold: 3 + medidas.px,
-  extraBold: 5 + medidas.px
+  sm: 1 + medidas.px,
+  md: 2 + medidas.px,
+  lg: 3 + medidas.px,
+  xl: 5 + medidas.px
 }
 
 const borderRadius = {
@@ -34,17 +35,17 @@ const marginsPaddings = {
   sm: 0.5 + medidas.rem, // m-2
   md: 1 + medidas.rem, // m-3
   lg: 1.5 + medidas.rem, // m-4
-  xg: 3 + medidas.rem, // m-5
-  xxg: 4 + medidas.rem // m-6
+  xl: 3 + medidas.rem, // m-5
+  xxl: 4 + medidas.rem // m-6
 }
 
 const fontSize = {
-  root: '15' + medidas.px,
-  base: '1' + medidas.rem,
-  lg: '1.2' + medidas.rem,
-  md: '1' + medidas.rem,
-  sm: '0.8' + medidas.rem,
-  xs: '0.6' + medidas.rem
+  root: 15 + medidas.px,
+  base: 1 + medidas.rem,
+  lg: 1.2 + medidas.rem,
+  md: 1 + medidas.rem,
+  sm: 0.8 + medidas.rem,
+  xs: 0.6 + medidas.rem
 }
 
 const gridBreakpoints = {
@@ -60,7 +61,7 @@ const globalSizes = [
   'sm',
   'md',
   'lg',
-  'xg'
+  'xl'
 ]
 
 export {

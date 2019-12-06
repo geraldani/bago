@@ -14,11 +14,11 @@ const Button = (props) => {
     block: props.block,
     disabled: props.disabled,
     shadow: props.shadow,
-    className,
+    className
   }
 
   return (
-    <ButtonLink{...commonProps} to={props.link}>
+    <ButtonLink {...commonProps} to={props.link} type='button'>
       {props.children}
     </ButtonLink>
   )

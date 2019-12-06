@@ -2,6 +2,8 @@ import styled from 'styled-components'
 import { borderRadius, borderWidth, color, marginsPaddings } from '../../../../styles/GlobalVariables'
 
 const paddingCard = marginsPaddings.lg
+const cardBorderWidth = borderWidth.sm
+const cardBorderRadius = borderRadius.sm
 
 const StyledCard = styled.div`
   position: relative;
@@ -11,8 +13,8 @@ const StyledCard = styled.div`
   word-wrap: break-word;
   background-color: ${color.white};
   background-clip: border-box;
-  border: solid ${borderWidth.thin} ${color.border};
-  border-radius: ${borderRadius.sm};
+  border: solid ${cardBorderWidth} ${color.border};
+  border-radius: ${cardBorderRadius};
   padding: ${paddingCard};
 `
 
@@ -23,7 +25,7 @@ const StyledHeaderCard = styled.div`
     content: '';
     position: absolute;
     width: calc(100% + (${paddingCard}*2));
-    height: ${borderWidth.thin};
+    height: ${cardBorderWidth};
     bottom:0;
     left: -${paddingCard};
     background-color: ${color.border};
@@ -35,7 +37,7 @@ const StyledHeaderBody = styled.div`
 `
 
 const StyledHeaderFooter = styled.div`
-
+  padding-top: ${paddingCard};
 `
 
 export {

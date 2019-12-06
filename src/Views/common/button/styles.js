@@ -1,11 +1,19 @@
 import styled, { css } from 'styled-components'
 import { Link } from 'react-router-dom'
-import { color, fontSize, borderRadius, gridBreakpoints, globalSizes } from '../../../styles/GlobalVariables'
+import {
+  color,
+  fontSize,
+  borderRadius,
+  gridBreakpoints,
+  globalSizes,
+  borderWidth
+} from '../../../styles/GlobalVariables'
 import { Shadow } from '../../../styles/GlobalStyles'
 
 // line height
 const btnLineHeight = 1.2
-const btnFontWeight = 'normal'
+const btnFontWeight = 'bold'
+const btnBorderWidth = borderWidth.md
 
 // padding x
 const btnPaddingX = {
@@ -39,8 +47,10 @@ const btnBorderRadius = {
 const btnColor = {
   primary: color.primary,
   secondary: color.secondary,
-  primaryHover: color.primary,
-  secondaryHover: color.secondary
+  primaryHover: color.primary + 'd6',
+  secondaryHover: color.secondary + 'd6',
+  colorPrimary: color.black,
+  colorSecondary: color.back
 }
 
 const findSize = (size) => globalSizes.find(e => e === size)
@@ -48,20 +58,18 @@ const findSize = (size) => globalSizes.find(e => e === size)
 const ButtonStylesTypes = {
   primary: css`
     background-color: ${btnColor.primary};
-    color: ${color.white};
+    color: ${btnColor.colorPrimary};
     border-color: ${btnColor.primary};
     &:hover{
-      color: ${color.white};
-      background-color: ${btnColor.primaryHover};
-      border-color: ${btnColor.primaryHover};
+    transform: scale(1.05);
 
   }`,
   secondary: css`
     background-color: ${btnColor.secondary};
-    color: ${color.white};
+    color: ${btnColor.colorSecondary};
     border-color: ${btnColor.secondary};
     &:hover{
-      color: ${color.white};
+      color: ${btnColor.colorSecondary};
       background-color: ${btnColor.secondaryHover};
       border-color: ${btnColor.secondaryHover};
 
@@ -71,7 +79,7 @@ const ButtonStylesTypes = {
     color: ${btnColor.primary};
     border-color: ${btnColor.primary};
      &:hover{
-      color: ${color.white};
+      color: ${btnColor.colorPrimary};
       background-color: ${btnColor.primary};
   }`,
   'outline-secondary': css`
@@ -79,7 +87,7 @@ const ButtonStylesTypes = {
     color: ${btnColor.secondary};
     border-color: ${btnColor.secondary}!important;
      &:hover{
-      color: ${color.white};
+      color: ${btnColor.colorSecondary};
       background-color: ${btnColor.secondary};
   }`,
   'simple-primary': css`
@@ -146,7 +154,7 @@ const findButtonSize = (size) => {
 }
 
 const commosStyles = css`
-  border: 1px solid;
+  border: ${btnBorderWidth} solid;
   font-weight: ${btnFontWeight};
   transition: background-color 250ms, transform 90ms linear, box-shadow 300ms ease-in-out;
   line-height: ${btnLineHeight};
