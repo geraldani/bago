@@ -2,7 +2,7 @@ const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const webpack = require('webpack')
 
-const PORT = 9000
+const PORT = 9001
 const URL = `http://localhost:${PORT}/`
 
 module.exports = {
