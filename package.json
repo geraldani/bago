@@ -2,9 +2,9 @@
   "name": "bago",
   "version": "1.0.0",
   "description": "un sitio de distribucion de medicamentos entre farmacias y distribuidores",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "webpack-dev-server --config ./webpack.dev.config.js"
   },
   "keywords": [
     "farmacia",
@@ -15,6 +15,29 @@
   "author": "Geraldyn Chirinos",
   "license": "MIT",
   "dependencies": {
-    "react": "16.12.0"
+    "bootstrap": "4.4.1",
+    "jquery": "3.4.1",
+    "prop-types": "15.7.2",
+    "react": "16.12.0",
+    "react-dom": "16.12.0",
+    "react-icons": "3.8.0",
+    "react-router-dom": "5.1.2",
+    "styled-components": "4.4.1"
+  },
+  "devDependencies": {
+    "@babel/core": "7.7.5",
+    "@babel/plugin-syntax-dynamic-import": "7.7.4",
+    "@babel/plugin-transform-runtime": "7.7.5",
+    "@babel/preset-env": "7.7.5",
+    "@babel/preset-react": "7.7.4",
+    "@babel/runtime": "7.7.5",
+    "babel-loader": "8.0.6",
+    "css-loader": "3.2.1",
+    "file-loader": "5.0.2",
+    "html-webpack-plugin": "3.2.0",
+    "style-loader": "1.0.1",
+    "webpack": "4.41.2",
+    "webpack-cli": "3.3.10",
+    "webpack-dev-server": "3.9.0"
   }
 }
